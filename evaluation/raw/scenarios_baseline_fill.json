@@ -1,0 +1,114 @@
+[
+  {
+    "scenario_id": "EVAL-05",
+    "category": "Di Luar Cakupan",
+    "query": "siapa nama CEO perusahaan ini?",
+    "evaluation_focus": "Perilaku sistem saat informasi tidak tersedia",
+    "expected": "Sistem tidak boleh mengarang nama; harus mengakui keterbatasan informasi",
+    "http": 503,
+    "intent": "llm_error",
+    "status": "error",
+    "response": "Layanan AI sedang tidak tersedia. Silakan coba lagi nanti.",
+    "all_responses": [
+      "Layanan AI sedang tidak tersedia. Silakan coba lagi nanti."
+    ],
+    "latency_ms_runs": [
+      4526.1
+    ],
+    "latency_ms_median": 4526.1,
+    "latency_ms_min": 4526.1,
+    "latency_ms_max": 4526.1,
+    "stage": {
+      "llm_calls": 3,
+      "llm_ms": 1094.6,
+      "embed_calls": 1,
+      "embed_ms": 397.3,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 7
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 397.2613669993734,
+        "n_texts": 1,
+        "est_tokens": 7
+      },
+      {
+        "kind": "llm",
+        "ms": 494.78041300062614,
+        "error": true
+      },
+      {
+        "kind": "llm",
+        "ms": 282.1860909998577,
+        "error": true
+      },
+      {
+        "kind": "llm",
+        "ms": 317.66668199998094,
+        "error": true
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-12",
+    "category": "Resource/Token",
+    "query": "halo",
+    "evaluation_focus": "Baseline penggunaan token untuk query sangat singkat",
+    "expected": "Bandingkan token usage query ini vs EVAL-11 sebagai referensi efisiensi",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Silakan ajukan pertanyaan Anda terkait informasi sisa cuti, waktu perbaikan perangkat, atau prosedur izin sakit. Jika pertanyaan Anda di luar topik tersebut, saya tidak memiliki informasinya.",
+    "all_responses": [
+      "Silakan ajukan pertanyaan Anda terkait informasi sisa cuti, waktu perbaikan perangkat, atau prosedur izin sakit. Jika pertanyaan Anda di luar topik tersebut, saya tidak memiliki informasinya."
+    ],
+    "latency_ms_runs": [
+      11137.0
+    ],
+    "latency_ms_median": 11137.0,
+    "latency_ms_min": 11137.0,
+    "latency_ms_max": 11137.0,
+    "stage": {
+      "llm_calls": 3,
+      "llm_ms": 7652.4,
+      "embed_calls": 1,
+      "embed_ms": 474.7,
+      "prompt_tokens": 293,
+      "output_tokens": 37,
+      "thinking_tokens": 983,
+      "total_tokens": 1313,
+      "est_embed_tokens": 1
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 474.7304920001625,
+        "n_texts": 1,
+        "est_tokens": 1
+      },
+      {
+        "kind": "llm",
+        "ms": 464.3333359999815,
+        "error": true
+      },
+      {
+        "kind": "llm",
+        "ms": 278.7020499999926,
+        "error": true
+      },
+      {
+        "kind": "llm",
+        "ms": 6909.331377999479,
+        "prompt_tokens": 293,
+        "output_tokens": 37,
+        "thinking_tokens": 983,
+        "total_tokens": 1313,
+        "prompt_chars": 1237
+      }
+    ]
+  }
+]

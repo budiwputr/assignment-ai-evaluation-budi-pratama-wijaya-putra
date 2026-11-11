@@ -1,0 +1,504 @@
+[
+  {
+    "scenario_id": "EVAL-01",
+    "category": "Relevansi Dasar",
+    "query": "berapa jatah cuti tahunan saya?",
+    "evaluation_focus": "Relevansi jawaban",
+    "expected": "Sistem menjawab sesuai FAQ cuti (12 hari) dengan akurat",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti tersebut dapat diambil setelah Anda memiliki masa kerja minimal 3 bulan.",
+    "all_responses": [
+      "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti tersebut dapat diambil setelah Anda memiliki masa kerja minimal 3 bulan.",
+      "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti ini dapat mulai diambil setelah kamu memiliki masa kerja minimal 3 bulan."
+    ],
+    "latency_ms_runs": [
+      2014.0,
+      2977.4
+    ],
+    "latency_ms_median": 2495.7,
+    "latency_ms_min": 2014.0,
+    "latency_ms_max": 2977.4,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 1586.0,
+      "embed_calls": 1,
+      "embed_ms": 405.1,
+      "prompt_tokens": 420,
+      "output_tokens": 31,
+      "thinking_tokens": 0,
+      "total_tokens": 451,
+      "est_embed_tokens": 7
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 405.1314639982593,
+        "n_texts": 1,
+        "est_tokens": 7
+      },
+      {
+        "kind": "llm",
+        "ms": 1586.0110279973014,
+        "prompt_tokens": 420,
+        "output_tokens": 31,
+        "thinking_tokens": null,
+        "total_tokens": 451,
+        "prompt_chars": 1716
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-02",
+    "category": "Relevansi Dasar",
+    "query": "gimana cara reset password vpn ya",
+    "evaluation_focus": "Relevansi jawaban (bahasa informal)",
+    "expected": "Sistem tetap menemukan FAQ yang tepat meski frasa informal",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Untuk melakukan reset password VPN, Anda dapat memprosesnya secara mandiri melalui portal self-service IT. Jika akun Anda dalam kondisi terkunci, silakan hubungi tim IT Support untuk bantuan lebih lanjut.",
+    "all_responses": [
+      "Untuk melakukan reset password VPN, Anda dapat memprosesnya secara mandiri melalui portal self-service IT. Jika akun Anda dalam kondisi terkunci, silakan hubungi tim IT Support untuk bantuan lebih lanjut.",
+      "Untuk melakukan reset password VPN, Anda dapat melakukannya secara mandiri melalui portal self-service IT. Jika akun Anda terkunci, silakan hubungi tim IT Support untuk bantuan lebih lanjut."
+    ],
+    "latency_ms_runs": [
+      2720.8,
+      2453.9
+    ],
+    "latency_ms_median": 2587.4,
+    "latency_ms_min": 2453.9,
+    "latency_ms_max": 2720.8,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 2245.6,
+      "embed_calls": 1,
+      "embed_ms": 457.5,
+      "prompt_tokens": 319,
+      "output_tokens": 41,
+      "thinking_tokens": 0,
+      "total_tokens": 360,
+      "est_embed_tokens": 8
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 457.53024599980563,
+        "n_texts": 1,
+        "est_tokens": 8
+      },
+      {
+        "kind": "llm",
+        "ms": 2245.6330339991837,
+        "prompt_tokens": 319,
+        "output_tokens": 41,
+        "thinking_tokens": null,
+        "total_tokens": 360,
+        "prompt_chars": 1410
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-03",
+    "category": "Parafrase/Sinonim",
+    "query": "saya lupa kata sandi laptop kantor, harus gimana?",
+    "evaluation_focus": "Kemampuan semantic search menangkap sinonim (kata sandi vs password)",
+    "expected": "Sistem mengarahkan ke FAQ password laptop yang relevan",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Untuk mereset password akun laptop kerja, Anda dapat menghubungi tim IT Support dengan mengajukan tiket bantuan. Tim IT Support akan melakukan verifikasi identitas Anda terlebih dahulu sebelum proses reset password dilakukan.",
+    "all_responses": [
+      "Untuk mereset password akun laptop kerja, Anda dapat menghubungi tim IT Support dengan mengajukan tiket bantuan. Tim IT Support akan melakukan verifikasi identitas Anda terlebih dahulu sebelum proses reset password dilakukan.",
+      "Jika Anda lupa password akun laptop kerja, silakan hubungi tim IT Support dengan mengajukan tiket untuk melakukan reset password. Proses verifikasi identitas akan dilakukan oleh tim IT sebelum reset password diproses."
+    ],
+    "latency_ms_runs": [
+      2291.5,
+      3302.0
+    ],
+    "latency_ms_median": 2796.8,
+    "latency_ms_min": 2291.5,
+    "latency_ms_max": 3302.0,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 1830.7,
+      "embed_calls": 1,
+      "embed_ms": 454.5,
+      "prompt_tokens": 572,
+      "output_tokens": 39,
+      "thinking_tokens": 0,
+      "total_tokens": 611,
+      "est_embed_tokens": 23
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 454.47757500005537,
+        "n_texts": 3,
+        "est_tokens": 23
+      },
+      {
+        "kind": "llm",
+        "ms": 1830.7347929985553,
+        "prompt_tokens": 572,
+        "output_tokens": 39,
+        "thinking_tokens": null,
+        "total_tokens": 611,
+        "prompt_chars": 2522
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-04",
+    "category": "Di Luar Cakupan",
+    "query": "apakah kantor menyediakan tempat parkir motor gratis?",
+    "evaluation_focus": "Perilaku sistem saat informasi tidak tersedia",
+    "expected": "Sistem mengakui tidak punya informasi tsb",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut.",
+    "all_responses": [
+      "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut.",
+      "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut."
+    ],
+    "latency_ms_runs": [
+      512.8,
+      451.5
+    ],
+    "latency_ms_median": 482.1,
+    "latency_ms_min": 451.5,
+    "latency_ms_max": 512.8,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 1,
+      "embed_ms": 507.4,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 13
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 507.4209200029145,
+        "n_texts": 1,
+        "est_tokens": 13
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-05",
+    "category": "Di Luar Cakupan",
+    "query": "siapa nama CEO perusahaan ini?",
+    "evaluation_focus": "Perilaku sistem saat informasi tidak tersedia",
+    "expected": "Sistem tidak boleh mengarang nama; harus mengakui keterbatasan informasi",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut.",
+    "all_responses": [
+      "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut.",
+      "Maaf, saya tidak memiliki informasi tersebut di knowledge base IT Helpdesk. Silakan ajukan tiket ke tim IT Support atau HR untuk mendapatkan bantuan lebih lanjut."
+    ],
+    "latency_ms_runs": [
+      446.8,
+      467.0
+    ],
+    "latency_ms_median": 456.9,
+    "latency_ms_min": 446.8,
+    "latency_ms_max": 467.0,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 1,
+      "embed_ms": 442.5,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 7
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 442.51614500171854,
+        "n_texts": 1,
+        "est_tokens": 7
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-06",
+    "category": "Tool Call Valid",
+    "query": "apa status TICKET-0005?",
+    "evaluation_focus": "Akurasi tool call",
+    "expected": "Sistem mengembalikan status tiket yang sesuai data mock",
+    "http": 200,
+    "intent": "ticket_status",
+    "status": "success",
+    "response": "Tiket TICKET-0005 — Reset password VPN gagal terus (kategori: Access). Status: Diproses. Update terakhir: 2026-08-27.",
+    "all_responses": [
+      "Tiket TICKET-0005 — Reset password VPN gagal terus (kategori: Access). Status: Diproses. Update terakhir: 2026-08-27.",
+      "Tiket TICKET-0005 — Reset password VPN gagal terus (kategori: Access). Status: Diproses. Update terakhir: 2026-08-27."
+    ],
+    "latency_ms_runs": [
+      196.6,
+      21.6
+    ],
+    "latency_ms_median": 109.1,
+    "latency_ms_min": 21.6,
+    "latency_ms_max": 196.6,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 0,
+      "embed_ms": 0,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 0
+    },
+    "events": []
+  },
+  {
+    "scenario_id": "EVAL-07",
+    "category": "Tool Call Invalid",
+    "query": "apa status TICKET-9999?",
+    "evaluation_focus": "Penanganan data tidak ditemukan",
+    "expected": "Sistem memberi pesan informatif",
+    "http": 200,
+    "intent": "ticket_status",
+    "status": "success",
+    "response": "Tiket TICKET-9999 tidak ditemukan. Periksa kembali nomor tiket Anda (format: TICKET-XXXX).",
+    "all_responses": [
+      "Tiket TICKET-9999 tidak ditemukan. Periksa kembali nomor tiket Anda (format: TICKET-XXXX).",
+      "Tiket TICKET-9999 tidak ditemukan. Periksa kembali nomor tiket Anda (format: TICKET-XXXX)."
+    ],
+    "latency_ms_runs": [
+      12.4,
+      14.4
+    ],
+    "latency_ms_median": 13.4,
+    "latency_ms_min": 12.4,
+    "latency_ms_max": 14.4,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 0,
+      "embed_ms": 0,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 0
+    },
+    "events": []
+  },
+  {
+    "scenario_id": "EVAL-08",
+    "category": "Tool Call Ambigu",
+    "query": "tiket saya gimana ya?",
+    "evaluation_focus": "Penanganan permintaan tanpa ID eksplisit",
+    "expected": "Sistem meminta klarifikasi ID tiket",
+    "http": 200,
+    "intent": "ticket_status",
+    "status": "success",
+    "response": "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001.",
+    "all_responses": [
+      "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001.",
+      "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001."
+    ],
+    "latency_ms_runs": [
+      3.4,
+      4.2
+    ],
+    "latency_ms_median": 3.8,
+    "latency_ms_min": 3.4,
+    "latency_ms_max": 4.2,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 0,
+      "embed_ms": 0,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 0
+    },
+    "events": []
+  },
+  {
+    "scenario_id": "EVAL-09",
+    "category": "Routing Ambigu",
+    "query": "kenapa laptop saya lambat dan gimana cara cek tiket yang saya buat soal itu?",
+    "evaluation_focus": "Kemampuan router menangani query campuran (informasi + aksi)",
+    "expected": "Amati intent mana yang dipilih dan apakah masuk akal; catat sebagai temuan kualitatif",
+    "http": 200,
+    "intent": "ticket_status",
+    "status": "success",
+    "response": "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001.",
+    "all_responses": [
+      "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001.",
+      "Mohon sebutkan nomor tiket yang ingin dicek, contoh: TICKET-0001."
+    ],
+    "latency_ms_runs": [
+      4.9,
+      6.5
+    ],
+    "latency_ms_median": 5.7,
+    "latency_ms_min": 4.9,
+    "latency_ms_max": 6.5,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 0,
+      "embed_ms": 0,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 0
+    },
+    "events": []
+  },
+  {
+    "scenario_id": "EVAL-10",
+    "category": "Konsistensi",
+    "query": "berapa hari cuti tahunan yang saya dapat?",
+    "evaluation_focus": "Konsistensi jawaban terhadap query yang maknanya sama dengan EVAL-01",
+    "expected": "Jawaban harus konsisten dengan EVAL-01 meski kalimat beda",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti ini dapat mulai diambil setelah Anda memiliki masa kerja minimal 3 bulan.",
+    "all_responses": [
+      "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti ini dapat mulai diambil setelah Anda memiliki masa kerja minimal 3 bulan.",
+      "Karyawan tetap mendapatkan jatah 12 hari cuti tahunan. Cuti tersebut dapat diambil setelah Anda memiliki masa kerja minimal 3 bulan."
+    ],
+    "latency_ms_runs": [
+      1924.5,
+      1947.9
+    ],
+    "latency_ms_median": 1936.2,
+    "latency_ms_min": 1924.5,
+    "latency_ms_max": 1947.9,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 1426.6,
+      "embed_calls": 1,
+      "embed_ms": 490.0,
+      "prompt_tokens": 427,
+      "output_tokens": 32,
+      "thinking_tokens": 0,
+      "total_tokens": 459,
+      "est_embed_tokens": 10
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 489.95755600117263,
+        "n_texts": 1,
+        "est_tokens": 10
+      },
+      {
+        "kind": "llm",
+        "ms": 1426.6392579993408,
+        "prompt_tokens": 427,
+        "output_tokens": 32,
+        "thinking_tokens": null,
+        "total_tokens": 459,
+        "prompt_chars": 1765
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-11",
+    "category": "Beban Panjang",
+    "query": "Tolong jelaskan sedetail-detailnya seluruh kebijakan cuti, reset password, permintaan perangkat, dan proses onboarding sekaligus dalam satu jawaban.",
+    "evaluation_focus": "Latency & kualitas jawaban pada query kompleks/panjang",
+    "expected": "Amati waktu respons dan apakah jawaban tetap relevan atau melebar ke luar konteks",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Berikut adalah ringkasan kebijakan terkait:\n\n* **Kebijakan Cuti:** Cuti melahirkan diberikan 3 bulan, cuti *paternity* 2 hari kerja untuk karyawan pria, dan pengajuan cuti dilakukan melalui portal HR minimal 3 hari kerja sebelum tanggal cuti dengan persetujuan atasan.\n* **Reset Password:** Lupa password laptop dapat dibantu tim IT Support via tiket dengan verifikasi identitas, sedangkan reset password VPN dapat dilakukan mandiri via portal *self-service* IT atau via IT Support jika akun terkunci.\n* **Permintaan Perangkat:** Permintaan laptop baru diajukan melalui tiket IT dengan mencantumkan justifikasi kebutuhan serta memerlukan persetujuan manajer dan tim IT Asset.\n* **Proses Onboarding:** Sesi onboarding IT yang mencakup pelatihan dasar penggunaan tools internal dijadwalkan pada minggu pertama karyawan bergabung.",
+    "all_responses": [
+      "Berikut adalah ringkasan kebijakan terkait:\n\n* **Kebijakan Cuti:** Cuti melahirkan diberikan 3 bulan, cuti *paternity* 2 hari kerja untuk karyawan pria, dan pengajuan cuti dilakukan melalui portal HR minimal 3 hari kerja sebelum tanggal cuti dengan persetujuan atasan.\n* **Reset Password:** Lupa password laptop dapat dibantu tim IT Support via tiket dengan verifikasi identitas, sedangkan reset password VPN dapat dilakukan mandiri via portal *self-service* IT atau via IT Support jika akun terkunci.\n* **Permintaan Perangkat:** Permintaan laptop baru diajukan melalui tiket IT dengan mencantumkan justifikasi kebutuhan serta memerlukan persetujuan manajer dan tim IT Asset.\n* **Proses Onboarding:** Sesi onboarding IT yang mencakup pelatihan dasar penggunaan tools internal dijadwalkan pada minggu pertama karyawan bergabung.",
+      "**Cuti & Absensi:** Cuti diajukan melalui portal HR internal minimal 3 hari kerja sebelumnya dengan persetujuan atasan; cuti melahirkan diberikan 3 bulan dan cuti paternity 2 hari kerja.\n\n**Reset Password:** Lupa password laptop diatasi dengan menghubungi IT Support via tiket untuk verifikasi identitas, sedangkan reset password VPN dapat dilakukan mandiri via portal self-service IT atau menghubungi IT Support jika akun terkunci.\n\n**Permintaan Perangkat:** Permintaan laptop baru diajukan melalui tiket IT dengan justifikasi kebutuhan serta memerlukan persetujuan manajer dan tim IT Asset.\n\n**Onboarding:** Pelatihan dasar penggunaan tools internal untuk karyawan baru dijadwalkan pada sesi onboarding IT di minggu pertama bergabung."
+    ],
+    "latency_ms_runs": [
+      3350.2,
+      2288.9
+    ],
+    "latency_ms_median": 2819.6,
+    "latency_ms_min": 2288.9,
+    "latency_ms_max": 3350.2,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 2860.0,
+      "embed_calls": 1,
+      "embed_ms": 483.2,
+      "prompt_tokens": 569,
+      "output_tokens": 181,
+      "thinking_tokens": 0,
+      "total_tokens": 750,
+      "est_embed_tokens": 64
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 483.19989499941585,
+        "n_texts": 5,
+        "est_tokens": 64
+      },
+      {
+        "kind": "llm",
+        "ms": 2859.970418998273,
+        "prompt_tokens": 569,
+        "output_tokens": 181,
+        "thinking_tokens": null,
+        "total_tokens": 750,
+        "prompt_chars": 2557
+      }
+    ]
+  },
+  {
+    "scenario_id": "EVAL-12",
+    "category": "Resource/Token",
+    "query": "halo",
+    "evaluation_focus": "Baseline penggunaan token untuk query sangat singkat",
+    "expected": "Bandingkan token usage query ini vs EVAL-11 sebagai referensi efisiensi",
+    "http": 200,
+    "intent": "smalltalk",
+    "status": "success",
+    "response": "Halo! Saya asisten IT Helpdesk. Saya bisa membantu pertanyaan seputar cuti, password/akses, perangkat, onboarding, serta cek status tiket (contoh: TICKET-0001). Ada yang bisa dibantu?",
+    "all_responses": [
+      "Halo! Saya asisten IT Helpdesk. Saya bisa membantu pertanyaan seputar cuti, password/akses, perangkat, onboarding, serta cek status tiket (contoh: TICKET-0001). Ada yang bisa dibantu?",
+      "Halo! Saya asisten IT Helpdesk. Saya bisa membantu pertanyaan seputar cuti, password/akses, perangkat, onboarding, serta cek status tiket (contoh: TICKET-0001). Ada yang bisa dibantu?"
+    ],
+    "latency_ms_runs": [
+      3.5,
+      5.1
+    ],
+    "latency_ms_median": 4.3,
+    "latency_ms_min": 3.5,
+    "latency_ms_max": 5.1,
+    "stage": {
+      "llm_calls": 0,
+      "llm_ms": 0,
+      "embed_calls": 0,
+      "embed_ms": 0,
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "est_embed_tokens": 0
+    },
+    "events": []
+  }
+]

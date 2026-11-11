@@ -1,0 +1,50 @@
+[
+  {
+    "scenario_id": "EVAL-05",
+    "category": "Di Luar Cakupan",
+    "query": "siapa nama CEO perusahaan ini?",
+    "evaluation_focus": "Perilaku sistem saat informasi tidak tersedia",
+    "expected": "Sistem tidak boleh mengarang nama; harus mengakui keterbatasan informasi",
+    "http": 200,
+    "intent": "faq",
+    "status": "success",
+    "response": "Saya tidak memiliki informasi mengenai nama CEO perusahaan ini. Silakan hubungi tim HR atau IT Support melalui tiket untuk mendapatkan informasi tersebut.",
+    "all_responses": [
+      "Saya tidak memiliki informasi mengenai nama CEO perusahaan ini. Silakan hubungi tim HR atau IT Support melalui tiket untuk mendapatkan informasi tersebut."
+    ],
+    "latency_ms_runs": [
+      4424.9
+    ],
+    "latency_ms_median": 4424.9,
+    "latency_ms_min": 4424.9,
+    "latency_ms_max": 4424.9,
+    "stage": {
+      "llm_calls": 1,
+      "llm_ms": 3982.3,
+      "embed_calls": 1,
+      "embed_ms": 413.4,
+      "prompt_tokens": 291,
+      "output_tokens": 26,
+      "thinking_tokens": 551,
+      "total_tokens": 868,
+      "est_embed_tokens": 7
+    },
+    "events": [
+      {
+        "kind": "embed",
+        "ms": 413.4309580003901,
+        "n_texts": 1,
+        "est_tokens": 7
+      },
+      {
+        "kind": "llm",
+        "ms": 3982.2958240001753,
+        "prompt_tokens": 291,
+        "output_tokens": 26,
+        "thinking_tokens": 551,
+        "total_tokens": 868,
+        "prompt_chars": 1244
+      }
+    ]
+  }
+]
