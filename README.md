@@ -231,5 +231,3 @@ python evaluation/build_reports.py && python evaluation/fill_before_after.py
 Pada mesin pengembangan ini FAISS diblokir kebijakan Application Control Windows, sehingga saya menjalankan semuanya di Docker (`evaluation/Dockerfile.eval`, `evaluation/_docker_run.sh`). Menjalankan server seperti biasa: `cd system && uvicorn app.main:app` atau `docker build -t it-helpdesk-assistant . && docker run -p 8000:8000 --env-file .env it-helpdesk-assistant`.
 `system/README.md` adalah dokumentasi sistem asli (Assignment 4); perilaku yang berubah dirinci di bagian 8 dokumen ini.
 
-## Catatan pengumpulan
-Folder `system/` berasal dari repo git terpisah (memiliki `.git` sendiri). Hapus/pindahkan `system/.git` sebelum menambahkan repositori ini agar `system/` tidak terdaftar sebagai submodule kosong. File `.env` berisi API key dan tidak boleh di-commit (sudah ada di `.gitignore`).
